@@ -1,12 +1,22 @@
+// const weddingDate = new Date().getTime() + 5000; 
 const weddingDate = new Date("Sep 6, 2025 12:00:00").getTime();
+const countdownWrapper = document.querySelector(".countdown-wrapper");
 
 function updateCountdown() {
     const now = new Date().getTime();
-    const distance = weddingDate - now;
+    let distance = weddingDate - now;
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
 
     if (distance <= 0) {
-        document.querySelector(".countdown-wrapper").innerHTML = 
-            "<h2>🎉 It's Our Wedding Day! 💍</h2>";
+        daysEl.textContent = "0";
+        hoursEl.textContent = "0";
+        minutesEl.textContent = "0";
+        secondsEl.textContent = "0";
+
         return;
     }
 
@@ -15,10 +25,10 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-    document.getElementById("minutes").textContent = minutes;
-    document.getElementById("seconds").textContent = seconds;
+    daysEl.textContent = days;
+    hoursEl.textContent = hours;
+    minutesEl.textContent = minutes;
+    secondsEl.textContent = seconds;
 }
 
 setInterval(updateCountdown, 1000);
