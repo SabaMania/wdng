@@ -1,0 +1,58 @@
+.main-pic {
+    max-width: 2048px;
+    width: 100%;
+    height: 100%;
+}
+
+.countdown-wrapper {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #5a4633; /* dark brown for text */
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.countdown-wrapper h2 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #bc9f75; /* beige-gold */
+    letter-spacing: 1px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 8px;
+}
+
+.time-box {
+    flex: 1;
+    background: #fff;
+    border: 2px solid #c8a97e; /* beige border */
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    min-width: 0;
+}
+
+.time-box span {
+    display: block;
+    font-size: clamp(0.9rem, 5vw, 2rem);
+    font-weight: bold;
+    color: #c8a97e; /* beige numbers */
+    line-height: 1.2;
+}
+
+.time-box small {
+    display: block;
+    font-size: clamp(0.6rem, 2.5vw, 0.9rem);
+    color: #5a4633; /* softer brown for labels */
+    text-transform: uppercase;
+    margin-top: 3px;
+}
