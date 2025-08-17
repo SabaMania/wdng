@@ -115,3 +115,22 @@
 .location-card:hover {
   transform: scale(1.05);
 }
+
+.coming-soon-message {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #bc9f75;
+  background-color: #fff5eb;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
