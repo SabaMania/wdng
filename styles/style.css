@@ -56,3 +56,62 @@
     text-transform: uppercase;
     margin-top: 3px;
 }
+
+.locations {
+  text-align: center;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+  color: #5a4633;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.locations h2 {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  margin-bottom: 20px;
+  color: #bc9f75;
+}
+
+
+
+.location-card:hover {
+  transform: scale(1.03);
+}
+
+.location-card h3 {
+  margin: 10px;
+  font-size: 1rem;
+  color: #5a4633;
+}
+
+
+.location-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin; /* Firefox */
+}
+
+.location-grid::-webkit-scrollbar {
+  height: 6px; /* scrollbar height */
+}
+
+.location-grid::-webkit-scrollbar-thumb {
+  background: #c8a97e;
+  border-radius: 10px;
+}
+
+.location-card {
+  flex: 0 0 260px; /* fixed width for each card */
+  background: #fff;
+  border: 2px solid #c8a97e;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.location-card:hover {
+  transform: scale(1.05);
+}
